@@ -21,7 +21,7 @@ jobs:
            password: ${{ secrets.DOCKER_PASSWORD }}
            
     - name: Build the Docker image
-      run: docker build -t 2005avi/myweb:v2
+      run: docker build -t 2005avi/myweb:v2 .
     - name: docker push  
       run: docker push 2005avi/myweb:v2
       
