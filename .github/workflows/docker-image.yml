@@ -25,12 +25,8 @@ jobs:
     - name: docker push  
       run: docker push 2005avi/myweb:v2
 
-    - name: docker stop
-      run: docker stop webcontainer
+    
 
-    - name: docker remove
-      run: docker rm webcontainer
-      
     - name: docker run
       run: docker run -d -p 80:80 --name webcontainer 2005avi/myweb:v2
         
